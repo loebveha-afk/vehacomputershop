@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "អំពីយើង";
+}
+
+<section class="shop-page-intro" aria-labelledby="about-title">
+    <div class="shop-about">
+        <div class="shop-about__visual">
+            <img class="shop-about__main-image"
+                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"
+                 alt="កន្លែងធ្វើការដែលរៀបចំដោយកុំព្យូទ័រទំនើប" />
+            <div class="shop-about__experience">
+                <strong>១៥<span>+</span></strong>
+                <span>ឆ្នាំនៃសេវាកម្ម<br />បច្ចេកវិទ្យាដ៏ល្អ</span>
+            </div>
+            <img class="shop-about__detail-image"
+                 src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=480&amp;q=85"
+                 alt="ក្រុមការងារ Veha Computer Store កំពុងពិភាក្សាការងារ" />
+        </div>
+
+        <div class="shop-about__copy">
+            <span class="shop-script">រឿងរ៉ាវរបស់យើង</span>
+            <h1 id="about-title">បច្ចេកវិទ្យាគួរតែ<br />ធ្វើឱ្យជីវិត <span>កាន់តែប្រសើរ។</span></h1>
+            <span class="shop-title-rule" aria-hidden="true"></span>
+            <p class="shop-about__lead">
+                Veha Computer Store ចាប់ផ្តើមពីគំនិតសាមញ្ញមួយ៖ ការស្វែងរកកុំព្យូទ័រដែលស័ក្តិសម គួរតែមានភាពងាយស្រួល។
+                សព្វថ្ងៃនេះ យើងនាំមកជូនអ្នកនូវបច្ចេកវិទ្យាដែលគួរឱ្យទុកចិត្ត និងការណែនាំដ៏មានប្រយោជន៍ពីអ្នកជំនាញ។
+            </p>
+
+            <ul class="shop-values" aria-label="គុណតម្លៃរបស់យើង">
+                <li>
+                    <span class="shop-value-icon shop-value-icon--red" aria-hidden="true">✓</span>
+                    <span><strong>ការណែនាំដោយគិតពីអ្នកជាមុន</strong><small>ក្រុមការងាររបស់យើងជួយអ្នកជ្រើសរើសឧបករណ៍ដែលស័ក្តិសមនឹងការងារ និងការកម្សាន្តរបស់អ្នក។</small></span>
+                </li>
+                <li>
+                    <span class="shop-value-icon shop-value-icon--gold" aria-hidden="true">★</span>
+                    <span><strong>បច្ចេកវិទ្យាដែលបានជ្រើសរើសយ៉ាងយកចិត្តទុកដាក់</strong><small>យើងផ្តោតលើផលិតផលដែលមានគុណភាពពីម៉ាកដែលយើងស្គាល់ និងទុកចិត្ត។</small></span>
+                </li>
+                <li>
+                    <span class="shop-value-icon shop-value-icon--green" aria-hidden="true">↗</span>
+                    <span><strong>យើងនៅទីនេះដើម្បីជួយអ្នក</strong><small>ចាប់ពីសំណួរដំបូង រហូតដល់ការដំឡើង និងជំនួយបច្ចេកទេស យើងត្រៀមជួយអ្នកជានិច្ច។</small></span>
+                </li>
+            </ul>
+
+            <a class="shop-button" asp-controller="Home" asp-action="Menu">
+                <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 4h14l-1 11H4L3 4Zm3 0a4 4 0 0 1 8 0" /></svg>
+                មើលផលិតផលរបស់យើង
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="shop-about-note">
+    <div>
+        <span class="shop-script">ឧបករណ៍ល្អ មនុស្សរួសរាយ</span>
+        <h2>យើងជួយអ្នកស្វែងរកអ្វីដែលអ្នកពេញចិត្ត។</h2>
+        <p>មិនថាអ្នកកំពុងរៀបចំកុំព្យូទ័រឈុតដំបូង ឬកំពុងដំឡើងម៉ាស៊ីនចាស់ឱ្យកាន់តែប្រសើរនោះទេ អ្នកអាចពឹងផ្អែកលើការណែនាំប្រកបដោយភាពរួសរាយ និងបច្ចេកវិទ្យាដែលបានជ្រើសរើសយ៉ាងយកចិត្តទុកដាក់។</p>
+    </div>
+    <a class="shop-button shop-button--dark" asp-controller="Home" asp-action="Contact">ពិភាក្សាជាមួយក្រុមការងារ <span aria-hidden="true">→</span></a>
+</section>

@@ -1,0 +1,95 @@
+@{
+    ViewData["Title"] = "ទំព័រដើម";
+}
+
+<section class="shop-hero" aria-labelledby="hero-title">
+    <div class="shop-hero__inner">
+        <div class="shop-hero__copy">
+            <div class="shop-rating">
+                <span class="shop-rating__icon" aria-hidden="true">★</span>
+                <span>ហាងបច្ចេកវិទ្យាដែលអតិថិជនជាង ២០,០០០ នាក់ពេញចិត្ត</span>
+            </div>
+
+            <h1 id="hero-title">បច្ចេកវិទ្យាដ៏អស្ចារ្យ<br /><span>សម្រាប់គ្រប់</span><br />ពេលវេលា</h1>
+            <p class="shop-hero__description">
+                ស្វែងរកឧបករណ៍ត្រឹមត្រូវសម្រាប់ការងារ ការកម្សាន្ត និងគ្រប់សកម្មភាពរបស់អ្នក។
+                ទិញកុំព្យូទ័រ និងគ្រឿងបន្លាស់ដែលគួរឱ្យទុកចិត្តនៅទីនេះ។
+            </p>
+
+            <div class="shop-hero__actions">
+                <a class="shop-button" asp-controller="Home" asp-action="Menu">
+                    <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 4h2l1.5 8.2a2 2 0 0 0 2 1.6h6.2a2 2 0 0 0 1.9-1.4L18 7H6M9 17a.8.8 0 1 1-1.6 0 .8.8 0 0 1 1.6 0Zm7 0a.8.8 0 1 1-1.6 0 .8.8 0 0 1 1.6 0Z" /></svg>
+                    មើលផលិតផល
+                </a>
+                <a class="shop-story-link" asp-controller="Home" asp-action="About">
+                    <span class="shop-story-link__play" aria-hidden="true">▶</span>
+                    <span>រឿងរ៉ាវរបស់យើង</span>
+                </a>
+            </div>
+
+            <div class="shop-stats" aria-label="ព័ត៌មានសង្ខេបអំពី Veha Computer Store">
+                <div><strong>៨៥០<span>+</span></strong><small>ផលិតផល</small></div>
+                <div><strong>១២០<span>+</span></strong><small>ម៉ាកល្បីៗ</small></div>
+                <div><strong>១៥<span>+</span></strong><small>ឆ្នាំនៃទំនុកចិត្ត</small></div>
+                <div><strong>១២<span>ឆ្នាំ</span></strong><small>ជំនួយពីអ្នកជំនាញ</small></div>
+            </div>
+        </div>
+
+        <div class="shop-hero__visual" aria-label="ការរៀបចំកុំព្យូទ័រលើតុបែបទំនើប">
+            <span class="shop-hero__watermark" aria-hidden="true">TECH</span>
+            <div class="shop-hero__image-ring">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                     alt="កន្លែងធ្វើការដែលមានម៉ូនីទ័រ ក្ដារចុច និងសម្ភារៈលើតុ" />
+            </div>
+            <div class="shop-highlight shop-highlight--deal">
+                <span class="shop-highlight__icon shop-highlight__icon--deal" aria-hidden="true">%</span>
+                <span><strong>ប្រូម៉ូសិនពិសេស</strong><small>បញ្ចុះតម្លៃរហូតដល់ ៣០% ថ្ងៃនេះ</small></span>
+            </div>
+            <div class="shop-highlight shop-highlight--shipping">
+                <span class="shop-highlight__icon shop-highlight__icon--shipping" aria-hidden="true">↗</span>
+                <span><strong>ដឹកជញ្ជូនរហ័ស</strong><small>ឥតគិតថ្លៃ សម្រាប់ការទិញចាប់ពី $៩៩</small></span>
+            </div>
+            <div class="shop-highlight shop-highlight--rating">
+                <span class="shop-highlight__icon shop-highlight__icon--rating" aria-hidden="true">★</span>
+                <span><strong>៤.៩/៥</strong><small>ការវាយតម្លៃជាង ២ពាន់</small></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="shop-categories" id="categories" aria-labelledby="categories-title">
+    <div class="shop-section-heading">
+        <div>
+            <span class="shop-eyebrow">ស្វែងរកផលិតផលដែលអ្នកពេញចិត្ត</span>
+            <h2 id="categories-title">ទិញតាមប្រភេទផលិតផល</h2>
+        </div>
+        <a class="shop-text-link" asp-controller="Home" asp-action="Menu">មើលផលិតផលទាំងអស់ <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="shop-category-grid">
+        <a class="shop-category-card" asp-controller="Home" asp-action="Menu">
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="កុំព្យូទ័រលើតុ និងគ្រឿងបន្លាស់សម្រាប់ផ្គុំម៉ាស៊ីន" loading="lazy" />
+            <span class="shop-category-card__shade"></span>
+            <span class="shop-category-card__copy"><small>រៀបចំកុំព្យូទ័ររបស់អ្នក</small><strong>កុំព្យូទ័រលើតុ</strong><span>មើលកុំព្យូទ័រលើតុ →</span></span>
+        </a>
+        <a class="shop-category-card" asp-controller="Home" asp-action="Menu">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="កុំព្យូទ័រយួរដៃសម្រាប់ការងារ និងការធ្វើដំណើរ" loading="lazy" />
+            <span class="shop-category-card__shade"></span>
+            <span class="shop-category-card__copy"><small>ថាមពលដែលងាយស្រួលយកតាមខ្លួន</small><strong>កុំព្យូទ័រយួរដៃ</strong><span>មើលកុំព្យូទ័រយួរដៃ →</span></span>
+        </a>
+        <a class="shop-category-card" asp-controller="Home" asp-action="Menu">
+            <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="កណ្ដុរកុំព្យូទ័រ និងសម្ភារៈបន្ថែម" loading="lazy" />
+            <span class="shop-category-card__shade"></span>
+            <span class="shop-category-card__copy"><small>បំពេញការរៀបចំរបស់អ្នក</small><strong>សម្ភារៈបន្ថែម</strong><span>មើលសម្ភារៈបន្ថែម →</span></span>
+        </a>
+    </div>
+</section>
+
+<section class="shop-promise" id="about">
+    <div class="shop-promise__mark" aria-hidden="true">C</div>
+    <div>
+        <span class="shop-eyebrow">ឧបករណ៍ល្អ មនុស្សរួសរាយ</span>
+        <h2>ទិញបច្ចេកវិទ្យាដោយងាយស្រួល។</h2>
+        <p>ក្រុមការងាររបស់យើងជួយអ្នកស្វែងរកបច្ចេកវិទ្យាដែលស័ក្តិសមដោយមិនចាំបាច់ពិបាកស្មាន។ រាល់ការបញ្ជាទិញទទួលបានការយកចិត្តទុកដាក់ និងជំនួយពីមនុស្សពិត។</p>
+    </div>
+    <a class="shop-button shop-button--dark" asp-controller="Home" asp-action="About">ស្វែងយល់អំពីយើង <span aria-hidden="true">→</span></a>
+</section>

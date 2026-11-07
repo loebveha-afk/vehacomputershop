@@ -1,0 +1,107 @@
+@{
+    ViewData["Title"] = "ទំនាក់ទំនង";
+}
+
+<section class="shop-contact-page" aria-labelledby="contact-title">
+    <header class="shop-menu-heading shop-contact-heading">
+        <span class="shop-script">ទាក់ទងមកយើង</span>
+        <h1 id="contact-title">និយាយអំពី<span>បច្ចេកវិទ្យា។</span></h1>
+        <span class="shop-title-rule" aria-hidden="true"></span>
+        <p>មានសំណួរ ឬត្រូវការការណែនាំមែនទេ? យើងរីករាយក្នុងការស្តាប់ពីអ្នក។</p>
+    </header>
+
+    <div class="shop-contact-grid">
+        <aside class="shop-contact-card" aria-label="ព័ត៌មានទំនាក់ទំនង Veha Computer Store">
+            <h2>យើងនៅទីនេះដើម្បីជួយអ្នក</h2>
+            <p>ផ្ញើសារមកយើង ឬទាក់ទងដោយផ្ទាល់។ ជាទូទៅ ក្រុមការងាររបស់យើងនឹងឆ្លើយតបក្នុងរយៈពេលមួយថ្ងៃធ្វើការ។</p>
+
+            <div class="shop-contact-detail">
+                <span class="shop-contact-detail__icon" aria-hidden="true">⌖</span>
+                <span><small>អញ្ជើញមកកាន់ហាង</small><strong>៤២ ផ្លូវបច្ចេកវិទ្យា<br />ញូវយ៉ក, NY 10001</strong></span>
+            </div>
+            <div class="shop-contact-detail">
+                <span class="shop-contact-detail__icon" aria-hidden="true">☎</span>
+                <span><small>ទូរស័ព្ទមកយើង</small><a href="tel: 0966439673"> 0966439673</a></span>
+            </div>
+            <div class="shop-contact-detail">
+                <span class="shop-contact-detail__icon" aria-hidden="true">✉</span>
+                <span><small>ផ្ញើអ៊ីមែលមកយើង</small><a href="mailto:Loebveha@computershop.com">Loebveha@computershop.com</a></span>
+            </div>
+            <div class="shop-contact-detail">
+                <span class="shop-contact-detail__icon" aria-hidden="true">◷</span>
+                <span><small>ម៉ោងបើកហាង</small><strong>ចន្ទ – សៅរ៍៖ ៩ ព្រឹក – ៦ ល្ងាច<br />ថ្ងៃអាទិត្យ៖ ១០ ព្រឹក – ៤ រសៀល</strong></span>
+            </div>
+
+            <div class="shop-contact-social" aria-label="តាមដាន Veha Computer Store">
+                <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">◎</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
+            </div>
+        </aside>
+
+        <form class="shop-contact-form" id="contact-form">
+            <div class="shop-contact-fields">
+                <label>
+                    ឈ្មោះរបស់អ្នក <span aria-hidden="true">*</span>
+                    <input type="text" name="name" autocomplete="name" placeholder="ឧទាហរណ៍៖ សុខា" required />
+                </label>
+                <label>
+                    អាសយដ្ឋានអ៊ីមែល <span aria-hidden="true">*</span>
+                    <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                    លេខទូរស័ព្ទ
+                    <input type="tel" name="phone" autocomplete="tel" placeholder="+1 (800) 000-0000" />
+                </label>
+                <label>
+                    តើអ្នកត្រូវការជំនួយអ្វី? <span aria-hidden="true">*</span>
+                    <select name="subject" required>
+                        <option value="សំណួរអំពីផលិតផល">សំណួរអំពីផលិតផល</option>
+                        <option value="ជំនួយអំពីការបញ្ជាទិញ">ជំនួយអំពីការបញ្ជាទិញ</option>
+                        <option value="ការណែនាំអំពីបច្ចេកវិទ្យា">ការណែនាំអំពីបច្ចេកវិទ្យា</option>
+                        <option value="សំណួរផ្សេងៗ">សំណួរផ្សេងៗ</option>
+                    </select>
+                </label>
+                <label class="shop-contact-message">
+                    សាររបស់អ្នក <span aria-hidden="true">*</span>
+                    <textarea name="message" rows="5" placeholder="សូមប្រាប់យើងពីអ្វីដែលយើងអាចជួយអ្នកបាន..." required></textarea>
+                </label>
+            </div>
+            <button class="shop-button" type="submit">
+                <svg aria-hidden="true" viewBox="0 0 20 20"><path d="m18 2-7.5 16-2.2-6.3L2 9.5 18 2Zm-9.7 9.7L18 2" /></svg>
+                រៀបចំអ៊ីមែល
+            </button>
+            <p class="shop-contact-status" id="contact-status" role="status" aria-live="polite">
+                ទម្រង់នេះនឹងបើកកម្មវិធីអ៊ីមែលរបស់អ្នក ដើម្បីឱ្យអ្នកផ្ញើសារទៅកាន់ក្រុមការងាររបស់យើង។
+            </p>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        document.querySelector("#contact-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const form = event.currentTarget;
+            if (!form.reportValidity()) {
+                return;
+            }
+
+            const values = new FormData(form);
+            const subject = `[Veha Computer Store] ${values.get("subject")}`;
+            const body = [
+                `ឈ្មោះ៖ ${values.get("name")}`,
+                `អ៊ីមែល៖ ${values.get("email")}`,
+                `ទូរស័ព្ទ៖ ${values.get("phone") || "មិនបានផ្តល់"}`,
+                "",
+                values.get("message")
+            ].join("\n");
+            const mailto = `mailto:Loebveha@computershop.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            document.querySelector("#contact-status").textContent =
+                "កម្មវិធីអ៊ីមែលរបស់អ្នកគួរតែបើកជាមួយសារដែលបានរៀបចំរួច។ ប្រសិនបើមិនបើកទេ សូមផ្ញើអ៊ីមែលទៅ Loebveha@computershop.com។";
+            window.location.href = mailto;
+        });
+    </script>
+}

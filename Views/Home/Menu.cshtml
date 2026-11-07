@@ -1,0 +1,141 @@
+@{
+    ViewData["Title"] = "ផលិតផល";
+}
+
+<section class="shop-menu-page" id="menu-products" aria-labelledby="menu-title">
+    <header class="shop-menu-heading">
+        <span class="shop-script">ស្វែងរកផលិតផលដែលអ្នកពេញចិត្ត</span>
+        <h1 id="menu-title">ស្វែងយល់អំពី<span>ផលិតផលរបស់យើង</span></h1>
+        <span class="shop-title-rule" aria-hidden="true"></span>
+        <p>ផលិតផលដែលបានជ្រើសរើសយ៉ាងយកចិត្តទុកដាក់ សម្រាប់ការងារ ការរៀបចំកុំព្យូទ័រ និងពេលសម្រាករបស់អ្នក។</p>
+    </header>
+
+    <div class="shop-menu-filters" role="group" aria-label="ត្រងតាមប្រភេទផលិតផល">
+        <button class="is-selected" type="button" data-category="all" aria-pressed="true">ទាំងអស់</button>
+        <button type="button" data-category="laptops" aria-pressed="false">កុំព្យូទ័រយួរដៃ</button>
+        <button type="button" data-category="desktops" aria-pressed="false">កុំព្យូទ័រលើតុ</button>
+        <button type="button" data-category="components" aria-pressed="false">គ្រឿងបន្លាស់</button>
+        <button type="button" data-category="accessories" aria-pressed="false">សម្ភារៈបន្ថែម</button>
+    </div>
+
+    <div class="shop-product-grid">
+        <article class="shop-product-card" data-category="laptops">
+            <div class="shop-product-card__image">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                     alt="កុំព្យូទ័រយួរដៃស្តើង សម្រាប់ការងារចល័ត" loading="lazy" />
+                <span class="shop-product-badge">ការងារ និងការសិក្សា</span>
+            </div>
+            <div class="shop-product-card__body">
+                <span class="shop-product-card__category">កុំព្យូទ័រយួរដៃ</span>
+                <h2>កុំព្យូទ័រយួរដៃប្រចាំថ្ងៃ</h2>
+                <p>កុំព្យូទ័រងាយស្រួលយកតាមខ្លួន និងមានភាពជឿជាក់ សម្រាប់ការងារគ្រប់ទីកន្លែង។</p>
+                <a asp-controller="Home" asp-action="Menu" asp-route-category="laptops">មើលកុំព្យូទ័រយួរដៃ <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
+
+        <article class="shop-product-card" data-category="desktops">
+            <div class="shop-product-card__image">
+                <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                     alt="គ្រឿងបន្លាស់កុំព្យូទ័រលើតុសម្រាប់រៀបចំកុំព្យូទ័រ" loading="lazy" />
+                <span class="shop-product-badge shop-product-badge--green">រៀបចំកុំព្យូទ័ររបស់អ្នក</span>
+            </div>
+            <div class="shop-product-card__body">
+                <span class="shop-product-card__category">កុំព្យូទ័រលើតុ</span>
+                <h2>កុំព្យូទ័រលើតុ</h2>
+                <p>ស្វែងរកកុំព្យូទ័រដែលអាចប្រើបានភ្លាមៗ ឬគ្រឿងសំខាន់ៗសម្រាប់ការផ្គុំម៉ាស៊ីនថ្មី។</p>
+                <a asp-controller="Home" asp-action="Menu" asp-route-category="desktops">មើលកុំព្យូទ័រលើតុ <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
+
+        <article class="shop-product-card" data-category="components">
+            <div class="shop-product-card__image">
+                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                     alt="គ្រឿងបន្លាស់កុំព្យូទ័រសម្រាប់ផ្គុំម៉ាស៊ីនផ្ទាល់ខ្លួន" loading="lazy" />
+                <span class="shop-product-badge shop-product-badge--gold">រៀបចំតាមចំណង់ចំណូលចិត្ត</span>
+            </div>
+            <div class="shop-product-card__body">
+                <span class="shop-product-card__category">គ្រឿងបន្លាស់</span>
+                <h2>គ្រឿងបន្លាស់កុំព្យូទ័រ</h2>
+                <p>បង្កើនសមត្ថភាពកុំព្យូទ័ររបស់អ្នក ដោយជ្រើសរើសគ្រឿងបន្លាស់ដែលត្រូវការ។</p>
+                <a asp-controller="Home" asp-action="Menu" asp-route-category="components">មើលគ្រឿងបន្លាស់ <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
+
+        <article class="shop-product-card" data-category="accessories">
+            <div class="shop-product-card__image">
+                <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                     alt="កណ្ដុរកុំព្យូទ័រ និងសម្ភារៈប្រើប្រាស់លើតុ" loading="lazy" />
+                <span class="shop-product-badge">សម្ភារៈចាំបាច់លើតុ</span>
+            </div>
+            <div class="shop-product-card__body">
+                <span class="shop-product-card__category">សម្ភារៈបន្ថែម</span>
+                <h2>គ្រឿងបន្ថែមប្រចាំថ្ងៃ</h2>
+                <p>ក្ដារចុច កណ្ដុរ និងសម្ភារៈមានប្រយោជន៍សម្រាប់បំពេញកន្លែងធ្វើការរបស់អ្នក។</p>
+                <a asp-controller="Home" asp-action="Menu" asp-route-category="accessories">មើលសម្ភារៈបន្ថែម <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
+
+        <article class="shop-product-card" data-category="accessories">
+            <div class="shop-product-card__image">
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                     alt="ម៉ូនីទ័រគុណភាពបង្ហាញខ្ពស់នៅលើតុធ្វើការនៅផ្ទះ" loading="lazy" />
+                <span class="shop-product-badge shop-product-badge--green">រូបភាពកាន់តែធំ</span>
+            </div>
+            <div class="shop-product-card__body">
+                <span class="shop-product-card__category">សម្ភារៈបន្ថែម</span>
+                <h2>ម៉ូនីទ័រ និងអេក្រង់</h2>
+                <p>បន្ថែមទំហំបង្ហាញសម្រាប់គំនិត ហ្គេម និងព័ត៌មានលម្អិតទាំងអស់របស់អ្នក។</p>
+                <a asp-controller="Home" asp-action="Menu" asp-route-category="accessories">មើលអេក្រង់ <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
+
+        <article class="shop-product-card" data-category="accessories">
+            <div class="shop-product-card__image">
+                <img src="https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                     alt="កាសសម្រាប់ការងារដែលផ្ដោតអារម្មណ៍ និងការកម្សាន្ត" loading="lazy" />
+                <span class="shop-product-badge shop-product-badge--gold">ស្ដាប់សំឡេងច្បាស់</span>
+            </div>
+            <div class="shop-product-card__body">
+                <span class="shop-product-card__category">សម្ភារៈបន្ថែម</span>
+                <h2>ឧបករណ៍សំឡេង និងកាស</h2>
+                <p>រីករាយជាមួយសំឡេងមានផាសុកភាពសម្រាប់ការហៅទូរស័ព្ទ តន្ត្រី និងការកម្សាន្ត។</p>
+                <a asp-controller="Home" asp-action="Menu" asp-route-category="accessories">មើលឧបករណ៍សំឡេង <span aria-hidden="true">→</span></a>
+            </div>
+        </article>
+    </div>
+
+    <p class="shop-menu-empty" hidden>មិនមានផលិតផលក្នុងប្រភេទនេះទេ។</p>
+    <p class="shop-menu-note">ត្រូវការការណែនាំមែនទេ? <a asp-controller="Home" asp-action="Contact">សួរក្រុមការងាររបស់យើង</a> ដើម្បីទទួលបានជំនួយក្នុងការជ្រើសរើស។</p>
+</section>
+
+@section Scripts {
+    <script>
+        const filters = document.querySelectorAll(".shop-menu-filters button");
+
+        filters.forEach((button) => {
+            button.addEventListener("click", () => {
+                const category = button.dataset.category;
+                const cards = document.querySelectorAll(".shop-product-card");
+                let visibleCount = 0;
+
+                filters.forEach((filter) => {
+                    const isSelected = filter === button;
+                    filter.classList.toggle("is-selected", isSelected);
+                    filter.setAttribute("aria-pressed", String(isSelected));
+                });
+
+                cards.forEach((card) => {
+                    const isVisible = category === "all" || card.dataset.category === category;
+                    card.hidden = !isVisible;
+                    visibleCount += Number(isVisible);
+                });
+
+                document.querySelector(".shop-menu-empty").hidden = visibleCount > 0;
+            });
+        });
+
+        const requestedCategory = new URLSearchParams(window.location.search).get("category");
+        const requestedFilter = [...filters].find((filter) => filter.dataset.category === requestedCategory);
+        requestedFilter?.click();
+    </script>
+}

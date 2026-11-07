@@ -1,0 +1,7 @@
+C:\wamp64\www\dotnet-mvc\ComputerShop\publish\ComputerShop.exe
+C:\wamp64\www\dotnet-mvc\ComputerShop\publish\appsettings.Development.json
+C:\wamp64\www\dotnet-mvc\ComputerShop\publish\appsettings.json
+C:\wamp64\www\dotnet-mvc\ComputerShop\publish\ComputerShop.dll
+C:\wamp64\www\dotnet-mvc\ComputerShop\publish\ComputerShop.deps.json
+C:\wamp64\www\dotnet-mvc\ComputerShop\publish\ComputerShop.runtimeconfig.json
+C:\wamp64\www\dotnet-mvc\ComputerShop\publish\ComputerShop.pdb

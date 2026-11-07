@@ -1,0 +1,25 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "កំហុស";
+}
+
+<h1 class="text-danger">មានបញ្ហាកើតឡើង។</h1>
+<h2 class="text-danger">មានបញ្ហាកើតឡើងខណៈពេលដំណើរការសំណើរបស់អ្នក។</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>លេខសម្គាល់សំណើ៖</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>របៀបអភិវឌ្ឍន៍</h3>
+<p>
+    ការប្តូរទៅបរិស្ថាន <strong>Development</strong> នឹងបង្ហាញព័ត៌មានលម្អិតបន្ថែមអំពីកំហុសដែលបានកើតឡើង។
+</p>
+<p>
+    <strong>មិនគួរបើកបរិស្ថាន Development សម្រាប់កម្មវិធីដែលបានដាក់ឱ្យប្រើប្រាស់ទេ។</strong>
+    វាអាចបង្ហាញព័ត៌មានរសើបពីកំហុសទៅកាន់អ្នកប្រើប្រាស់។
+    សម្រាប់ការកែកំហុសក្នុងម៉ាស៊ីនមូលដ្ឋាន សូមកំណត់អថេរបរិស្ថាន <strong>ASPNETCORE_ENVIRONMENT</strong> ជា <strong>Development</strong>
+    រួចចាប់ផ្តើមកម្មវិធីឡើងវិញ។
+</p>

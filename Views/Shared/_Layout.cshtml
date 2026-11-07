@@ -1,0 +1,147 @@
+﻿@{
+    var controllerName = ViewContext.RouteData.Values["controller"]?.ToString();
+    var actionName = ViewContext.RouteData.Values["action"]?.ToString();
+    var isHomePage = controllerName == "Home" && actionName == "Index";
+    var isShopPage = controllerName == "Home" && actionName != "Privacy" && actionName != "Error";
+}
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Veha Computer Store</title>
+    <script type="importmap"></script>
+    <link rel="icon" type="image/png" href="~/images/veha-computer-store-mark.png" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ComputerShop.styles.css" asp-append-version="true" />
+</head>
+<body class="@(isHomePage ? "is-home-page" : isShopPage ? "is-shop-page" : string.Empty)">
+    @if (isShopPage)
+    {
+        <header class="shop-header">
+            <div class="shop-topbar">
+                <div class="shop-header__inner shop-topbar__inner">
+                    <div class="shop-topbar__details">
+                        <a href="tel:+18001234567"><span aria-hidden="true">☎</span> +1 (800) 123-4567</a>
+                        <a href="mailto:hello@computershop.com"><span aria-hidden="true">✉</span> hello@computershop.com</a>
+                        <span><span aria-hidden="true">◆</span> ៤២ ផ្លូវបច្ចេកវិទ្យា ញូវយ៉ក</span>
+                    </div>
+                    <span class="shop-delivery">ដឹកជញ្ជូនឥតគិតថ្លៃថ្ងៃនេះ</span>
+                    <div class="shop-social" aria-label="តាមដាន Veha Computer Store">
+                        <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+                        <a href="https://www.instagram.com/" aria-label="Instagram">◎</a>
+                        <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
+                    </div>
+                </div>
+            </div>
+            <nav class="shop-navbar" aria-label="ម៉ឺនុយមេ">
+                <div class="shop-header__inner shop-navbar__inner">
+                    <a class="shop-brand" asp-controller="Home" asp-action="Index" aria-label="ទំព័រដើម Veha Computer Store">
+                        <img class="shop-brand__logo" src="~/images/veha-computer-store-mark.png" asp-append-version="true" alt="" />
+                        <span class="shop-brand__name">Veha Computer<span> Store</span><small>បច្ចេកវិទ្យាសម្រាប់គ្រប់ពេលវេលា</small></span>
+                    </a>
+                    <div class="shop-nav-links">
+                        <a class="@(isHomePage ? "is-active" : string.Empty)" aria-current="@(isHomePage ? "page" : null)" asp-controller="Home" asp-action="Index">ទំព័រដើម</a>
+                        <a class="@(actionName == "Menu" || actionName == "Product" ? "is-active" : string.Empty)" aria-current="@(actionName == "Menu" || actionName == "Product" ? "page" : null)" asp-controller="Home" asp-action="Menu">ផលិតផល</a>
+                        <a asp-controller="Home" asp-action="About" class="@(actionName == "About" ? "is-active" : string.Empty)" aria-current="@(actionName == "About" ? "page" : null)">អំពីយើង</a>
+                        <a asp-controller="Home" asp-action="Contact" class="@(actionName == "Contact" ? "is-active" : string.Empty)" aria-current="@(actionName == "Contact" ? "page" : null)">ទំនាក់ទំនង</a>
+                    </div>
+                    <div class="shop-nav-actions">
+                        <a class="shop-search" asp-controller="Home" asp-action="Menu" aria-label="មើលផលិតផល">
+                            <svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="8.8" cy="8.8" r="5.6" /><path d="m13 13 4 4" /></svg>
+                        </a>
+                        <a class="shop-order-button" asp-controller="Home" asp-action="Menu">
+                            <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 6h14l-1 11H4L3 6Zm4 0a3 3 0 0 1 6 0" /></svg>
+                            ទិញឥឡូវនេះ
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    }
+    else
+    {
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Veha Computer Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">ទំព័រដើម</a>
+                        </li>
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">ឯកជនភាព</a>
+                        </li> *@
+                       <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Menu">ផលិតផល</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">អំពីយើង</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">ទំនាក់ទំនង</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    }
+    <div class="@(isShopPage ? "home-page-content" : "container")">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @if (isShopPage)
+    {
+        <footer class="shop-site-footer">
+            <div class="shop-site-footer__main">
+                <div class="shop-site-footer__brand">
+                    <a class="shop-brand shop-brand--footer" asp-controller="Home" asp-action="Index" aria-label="ទំព័រដើម Veha Computer Store">
+                        <img class="shop-brand__logo" src="~/images/veha-computer-store-mark.png" asp-append-version="true" alt="" />
+                        <span class="shop-brand__name">Veha Computer<span> Store</span><small>បច្ចេកវិទ្យាសម្រាប់គ្រប់ពេលវេលា</small></span>
+                    </a>
+                    <p>ក្រុមការងាររួសរាយរាក់ទាក់ ផលិតផលបច្ចេកវិទ្យាដែលបានជ្រើសរើសយ៉ាងយកចិត្តទុកដាក់ និងបទពិសោធន៍ទិញទំនិញដ៏ងាយស្រួល។</p>
+                </div>
+                <nav class="shop-footer-links" aria-label="តំណភ្ជាប់រហ័ស">
+                    <h2>តំណភ្ជាប់រហ័ស</h2>
+                    <a asp-controller="Home" asp-action="Index">ទំព័រដើម</a>
+                    <a asp-controller="Home" asp-action="About">អំពីយើង</a>
+                    <a asp-controller="Home" asp-action="Menu">មើលផលិតផល</a>
+                    <a asp-controller="Home" asp-action="Contact">ទំនាក់ទំនង</a>
+                </nav>
+                <div class="shop-footer-contact">
+                    <h2>ទំនាក់ទំនងមកយើង</h2>
+                    <a href="tel:+18001234567">+1 (800) 123-4567</a>
+                    <a href="mailto:Loebveha@computershop.com">Loebveha@computershop.com</a>
+                    <span>៤២ ផ្លូវបច្ចេកវិទ្យា ញូវយ៉ក, NY 10001</span>
+                    <span>ចន្ទ – សៅរ៍៖ ៩ ព្រឹក – ៦ ល្ងាច</span>
+                </div>
+            </div>
+            <div class="shop-site-footer__bottom">
+                <span>© ២០២៦ Veha Computer Store។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</span>
+                <a asp-controller="Home" asp-action="Privacy">ឯកជនភាព</a>
+            </div>
+        </footer>
+    }
+    else
+    {
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; ២០២៦ - Veha Computer Store - <a asp-area="" asp-controller="Home" asp-action="Privacy">ឯកជនភាព</a>
+            </div>
+        </footer>
+    }
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
